@@ -1,3 +1,3 @@
 import("../crate/pkg").then(module => {
-  module.start();
+  //module.start(); // This is somehow redundant.
 });

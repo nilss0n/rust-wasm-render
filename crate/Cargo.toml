@@ -4,7 +4,7 @@ categories = ["wasm"]
 description = "My super awesome Rust, WebAssembly, and Webpack project!"
 license = "Apache-2.0/MIT"
 name = "rust-webpack"
-readme = "./README.md"
+readme = "../README.md"
 repository = "https://github.com/rustwasm/rust-webpack-template"
 version = "0.1.0"
 edition = "2018"
@@ -15,7 +15,7 @@ crate-type = ["cdylib"]
 [dependencies]
 js-sys = "0.3.6"
 cfg-if = "0.1.5"
-wasm-bindgen = "0.2.25"
+wasm-bindgen = "0.2.29"
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
@@ -29,8 +29,9 @@ console_error_panic_hook = { version = "0.1.5", optional = true }
 wee_alloc = { version = "0.4.2", optional = true }
 
 [dependencies.web-sys]
-version = "0.3"
+version = "0.3.6"
 features = [
+  "console",
   "Document",
   "Element",
   "HtmlElement",
@@ -41,5 +42,6 @@ features = [
   'WebGl2RenderingContext',
   'WebGlProgram',
   'WebGlShader',
+  'WebGlVertexArrayObject',
   "Window"
 ]
